@@ -1,0 +1,58 @@
+[project]
+name = "void-model"
+version = "0.1.0"
+description = "Netflix VOID — Video Object and Interaction Deletion (packaged fork)."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+dependencies = [
+    "absl-py",
+    "accelerate",
+    "albumentations",
+    "beautifulsoup4",
+    "decord",
+    "diffusers",
+    "einops",
+    "ftfy",
+    "func-timeout",
+    "imageio",
+    "imageio-ffmpeg",
+    "kornia",
+    "loguru",
+    "matplotlib",
+    "mediapy",
+    "ml-collections",
+    "numpy",
+    "omegaconf",
+    "opencv-python-headless",
+    "peft",
+    "Pillow",
+    "requests",
+    "safetensors",
+    "scikit-image",
+    "scikit-learn",
+    "scipy",
+    "sentencepiece",
+    "timm",
+    "tomesd",
+    "torch",
+    "torchdiffeq",
+    "torchsde",
+    "torchvision",
+    "tqdm",
+    "transformers",
+]
+
+[project.optional-dependencies]
+multi_gpu = ["xfuser", "deepspeed"]
+train = ["deepspeed", "tensorboard", "came-pytorch", "datasets"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["videox_fun*", "inference*", "config*"]
+
+[tool.setuptools.package-data]
+config = ["*.json"]
