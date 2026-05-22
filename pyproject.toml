@@ -33,6 +33,7 @@ dependencies = [
     "scikit-learn",
     "scipy",
     "sentencepiece",
+    "tiktoken",
     "timm",
     "tomesd",
     "torch",
