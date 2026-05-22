@@ -27,6 +27,7 @@ dependencies = [
     "opencv-python-headless",
     "peft",
     "Pillow",
+    "protobuf",
     "requests",
     "safetensors",
     "scikit-image",
